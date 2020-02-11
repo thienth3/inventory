@@ -1,0 +1,25 @@
+<div class="login-page">
+  <mat-card>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form class="form-login" *ngIf="formLogin" [formGroup]="formLogin" (ngSubmit)="login()">
+          <mat-form-field class="username w100">
+            <input formControlName="username" matInput placeholder="Username" />
+          </mat-form-field>
+
+          <mat-form-field class="password w100">
+            <input formControlName="password" type="password" matInput placeholder="Password" />
+          </mat-form-field>
+          <mat-checkbox formControlName="rememberMe">
+            {{ "RememberMe" }}
+          </mat-checkbox>
+          <div class="row">
+            <div class="col-md-12">
+                <button type="submit" mat-raised-button color="primary">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </mat-card>
+</div>

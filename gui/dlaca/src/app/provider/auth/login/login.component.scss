@@ -1,0 +1,27 @@
+/* Login Page ================================== */
+.login-page {
+  background-color: #00BCD4;
+  padding-left: 0;
+  max-width: 360px;
+  margin: 5% auto;
+}
+
+.social-icons {
+    padding-left: 0px;
+
+    li {
+        display: inline-block;
+        margin-right: 5px;
+
+        a {
+            width: 40px;
+        }
+    }
+}
+
+mat-form-field {
+  width: 100%;
+}
+mat-checkbox {
+  padding-bottom: 5px;
+}
