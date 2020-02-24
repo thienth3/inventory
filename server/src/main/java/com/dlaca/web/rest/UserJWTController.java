@@ -49,7 +49,7 @@ public class UserJWTController {
             new UsernamePasswordAuthenticationToken(loginVM.getUsername(), loginVM.getPassword());
 
 //        try {
-            Authentication authentication = this.authenticationManager.authenticate(authenticationToken);
+        Authentication authentication = this.authenticationManager.authenticate(authenticationToken);
             SecurityContextHolder.getContext().setAuthentication(authentication);
             boolean rememberMe = (loginVM.isRememberMe() == null) ? false : loginVM.isRememberMe();
             String jwt = tokenProvider.createToken(authentication, rememberMe);

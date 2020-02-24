@@ -13,4 +13,5 @@ export interface UserDTO {
   lastModifiedDate?: string;
   lastName?: string;
   login: string;
+  password: string;
 }

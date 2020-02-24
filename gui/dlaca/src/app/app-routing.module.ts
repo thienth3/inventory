@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProviderAuthGuard } from './auth/guard/provider-auth.guard';
 
+
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'provider',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'sign-in',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'provider',
     canActivate: [ProviderAuthGuard],

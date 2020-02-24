@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { INIT_API_CONFIGURATION } from './core/services/api.config';
@@ -13,17 +13,37 @@ import { HttpTokenInterceptor } from './core/http/interceptors/http-token.interc
 import { HttpLoadingInterceptor } from './core/http/interceptors/http-loading.interceptor';
 import { HttpErrorInterceptor } from './core/http/interceptors/http-error.interceptor';
 
+
+import { MatSliderModule } from '@angular/material/slider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ApiModule,
     BrowserAnimationsModule,
+    MatSliderModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
     NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({}),
+    FormsModule,
+    ReactiveFormsModule,
+
+
   ],
   providers: [
     INIT_API_CONFIGURATION,

@@ -49,6 +49,7 @@ export class AuthService {
   public isAuthenticated(): boolean {
     console.log(this.currentUser, this.token);
     if (!this.token) {
+      
       return false;
     }
     // Check whether the current time is past the

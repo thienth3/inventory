@@ -66,21 +66,13 @@ public class AccountResource {
         if (!checkPasswordLength(managedUserVM.getPassword())) {
             return new ResponseEntity<>(CHECK_ERROR_MESSAGE, HttpStatus.BAD_REQUEST);
         }
-        return userRepository.findOneByLogin(managedUserVM.getLogin().toLowerCase())
-            .map(user -> new ResponseEntity<>("login already in use", textPlainHeaders, HttpStatus.BAD_REQUEST))
-            .orElseGet(() -> userRepository.findOneByEmail(managedUserVM.getEmail())
-                .map(user -> new ResponseEntity<>("email address already in use", textPlainHeaders, HttpStatus.BAD_REQUEST))
-                .orElseGet(() -> {
-                    User user = userService
-                        .createUser(managedUserVM.getLogin(), managedUserVM.getPassword(),
-                            managedUserVM.getFirstName(), managedUserVM.getLastName(),
-                            managedUserVM.getEmail().toLowerCase(), managedUserVM.getImageUrl(),
-                            managedUserVM.getLangKey());
+        String datfake ="dddsd";
+        User user = userService.createUserFake( managedUserVM.getPassword(),
+                managedUserVM.getFirstName(), managedUserVM.getLastName(),
+                managedUserVM.getEmail().toLowerCase());
 
-                    mailService.sendActivationEmail(user);
-                    return new ResponseEntity<>(HttpStatus.CREATED);
-                })
-        );
+        mailService.sendActivationEmail(user);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     /**

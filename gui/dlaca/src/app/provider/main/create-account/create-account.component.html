@@ -1,0 +1,245 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-sm-12 ">
+      <h1 class="title">Get Started !</h1>
+      <h4>
+        Create an account to check out what's been
+      </h4>
+      <h4>
+        happening
+      </h4>
+      <div class="continue">
+
+        <button mat-raised-button class="google">
+          <a href="#"><img src="../../../../assets/images/search.svg" /></a>
+          <span> Continue with Google</span>
+        </button>
+
+
+
+        <button mat-raised-button class="github">
+          <a href="#"><img src="../../../../assets/images/github.svg" /></a>
+          <span> Continue with Github</span>
+
+        </button>
+
+      </div>
+
+      <div class="div-1">
+
+        <div class="or-google">
+          <hr class="flex-fill m-0">
+
+        </div>
+        <div class="or">
+          <span class="mx-3"> OR </span>
+        </div>
+
+        <div class="or-github">
+          <hr class="flex-fill m-0">
+        </div>
+
+
+
+        <form class="formSignUp" name="form" role="form" [formGroup]="registerForm" (ngSubmit)="onSubmitRegisters()">
+          <div class="full-name">
+            <div class="first-name">
+              <mat-form-field class="example-full-width">
+
+                <span matPrefix>
+                  <mat-icon> &nbsp;account_circle</mat-icon> &nbsp;&nbsp;
+                </span>
+                <input type="tel" matInput placeholder=" First name" formControlName="firstName">
+
+              </mat-form-field>
+            </div>
+            <div class="last-name">
+              <mat-form-field class="example-full-width">
+
+                <span matPrefix>
+                  <mat-icon> &nbsp;account_circle</mat-icon> &nbsp;&nbsp;
+                </span>
+                <input type="tel" matInput placeholder=" Last name"  formControlName="lastName">
+
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="email">
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon> &nbsp;mail_outline</mat-icon> &nbsp;&nbsp;
+              </span>
+              <input type="tel" matInput placeholder=" Email"  formControlName="email">
+
+            </mat-form-field>
+          </div>
+          <div class="password">
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon class="key"> &nbsp;vpn_key&nbsp;&nbsp;</mat-icon>
+              </span>
+              <input type="password" matInput placeholder=" Password"  formControlName="password">
+
+            </mat-form-field>
+          </div>
+          <div class="confirm-password">
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon class="key"> &nbsp;vpn_key&nbsp;&nbsp;</mat-icon>
+              </span>
+              <input type="password" matInput placeholder=" Confirm password"  formControlName="confirmPassword">
+
+
+            </mat-form-field>
+          </div>
+
+          <mat-checkbox class="check_box"> I agree with the</mat-checkbox>
+          <a class="policy">Privace Policy</a>
+
+          <div class="center">
+
+            <button mat-raised-button class="create_account" color="primary">Create account</button>
+          </div>
+          <div class="center">
+            &nbsp;
+
+            <a>Have an account already?</a>
+
+            &nbsp;
+            <a class="login">Login Now</a>
+
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- 
+
+
+ <div class="container">
+  <div class="row">
+    <div class="  col-md-10  col-sm-12">
+      <div class="row">
+        <div class="col-md-5 col-sm-12 ">
+          <h2 class="title">Get Started !</h2>
+          <h4>
+            Create an account to check out what's been
+          </h4>
+          <h4>
+            happening
+          </h4>
+          <br>
+
+          <div class="continue">
+
+            <button mat-raised-button class="google">
+              <a href="#"><img src="../../../../assets/images/search.svg" /></a>
+              <span>Continue with Google</span>
+            </button>
+
+
+
+            <button mat-raised-button class="github">
+              <a href="#"><img src="../../../../assets/images/github.svg" /></a>
+              <span> Continue with Github</span>
+
+            </button>
+
+          </div>
+
+          <div class="div-2">
+
+            <div class="ma">
+              <hr class="flex-fill m-0">
+
+            </div>
+            <div class="mb">
+              <span class="mx-3"> OR </span>
+            </div>
+
+            <div class="mc">
+              <hr class="flex-fill m-0">
+            </div>
+
+          </div>
+
+
+
+          <form class="formSignUp">
+
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon> &nbsp;account_circle</mat-icon> &nbsp;&nbsp;
+              </span>
+              <input type="tel" matInput placeholder=" Full name">
+
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon> &nbsp;mail_outline</mat-icon> &nbsp;&nbsp;
+              </span>
+              <input type="tel" matInput placeholder=" Email">
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon class="key"> &nbsp;vpn_key&nbsp;&nbsp;</mat-icon>
+              </span>
+              <input type="password" matInput placeholder=" Password">
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+
+              <span matPrefix>
+                <mat-icon class="key"> &nbsp;vpn_key&nbsp;&nbsp;</mat-icon>
+              </span>
+              <input type="password" matInput placeholder=" Confirm password">
+
+
+            </mat-form-field>
+
+
+            <mat-checkbox class="check_box"> I agree with the</mat-checkbox>
+            <a class="policy">Privace Policy</a>
+            <div class="center">
+
+              <button mat-raised-button class="create_account" color="primary">Create account</button>
+            </div>
+            <div class="center">
+              &nbsp;
+
+              <a>Have an account already?</a>
+
+              &nbsp;
+              <a class="login">Login Now</a>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="  col-md-7 ">
+    </div>
+    <div class="  col-md-2  ">
+  </div>
+</div> -->

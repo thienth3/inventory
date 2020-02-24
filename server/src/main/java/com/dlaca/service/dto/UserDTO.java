@@ -20,9 +20,6 @@ public class UserDTO {
 
     private Long id;
 
-    @NotBlank
-    @Pattern(regexp = Constants.LOGIN_REGEX)
-    @Size(min = 1, max = 100)
     private String login;
 
     @Size(max = 50)
@@ -35,12 +32,10 @@ public class UserDTO {
     @Size(min = 5, max = 100)
     private String email;
 
-    @Size(max = 256)
     private String imageUrl;
 
     private boolean activated = false;
 
-    @Size(min = 2, max = 5)
     private String langKey;
 
     private String createdBy;
