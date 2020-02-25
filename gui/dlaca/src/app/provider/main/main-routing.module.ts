@@ -5,22 +5,19 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ProviderAuthGuard } from 'src/app/auth/guard/provider-auth.guard';
 
-
 const routes: Routes = [{
   path: 'home',
-  component:HomeComponent,
+  component: HomeComponent,
   canActivate: [ProviderAuthGuard]
 },
-  
-  {
+{
   path: 'sign-in',
-  component:SignInComponent},
-  {
-    path: 'sign-up',
-    component:CreateAccountComponent},
-    
-
-
+  component: SignInComponent
+},
+{
+  path: 'sign-up',
+  component: CreateAccountComponent
+},
 ];
 
 @NgModule({

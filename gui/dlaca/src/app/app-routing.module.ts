@@ -4,11 +4,11 @@ import { ProviderAuthGuard } from './auth/guard/provider-auth.guard';
 
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'sign-in',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    redirectTo: 'provider',
+    pathMatch: 'full'
+  },
   {
     path: 'provider',
     canActivate: [ProviderAuthGuard],

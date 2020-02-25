@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProviderComponent } from './provider.component';
 
-
 const routes: Routes = [
   {
     path: 'auth',
@@ -15,7 +14,6 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: './main/main.module#MainModule',
-    
       }
     ]
   },

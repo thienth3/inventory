@@ -25,16 +25,13 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatSliderModule,
     MatIconModule,
-
     MatButtonModule,
     MatInputModule,
     MatCardModule,
     MaterialModule,
- 
-    MatRippleModule,
+     MatRippleModule,
     FormsModule,
     ReactiveFormsModule,
-   
-  ]
+     ]
 })
 export class MainModule { }

@@ -16,7 +16,7 @@ export class ProviderAuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       const returnUrl = state.url;
-
+      // if (this.auth.isProvider()) {
     if (this.isAuthorty()) {
       // if(localStorage.setItem.)
       // logged in so return true
@@ -35,4 +35,5 @@ export class ProviderAuthGuard implements CanActivate {
     }
     return false
   }
+
 }

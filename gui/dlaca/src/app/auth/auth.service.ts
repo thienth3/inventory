@@ -49,7 +49,6 @@ export class AuthService {
   public isAuthenticated(): boolean {
     console.log(this.currentUser, this.token);
     if (!this.token) {
-      
       return false;
     }
     // Check whether the current time is past the
@@ -78,23 +77,23 @@ export class AuthService {
   login(body): Observable<any> {
     // this.removeAccount();
     return this.userJWTService.authorizeUsingPOSTResponse(body)
-    .pipe(
-      map((res: any) => {
-        try {
-          console.log(res);
-          if (res) {
-            const temp = res.body;
-            localStorage.setItem(this._key_save, temp);
-            this.token = temp.idToken;
-            this.currentUser = temp.userInfo;
+      .pipe(
+        map((res: any) => {
+          try {
+            console.log(res);
+            if (res) {
+              const temp = res.body;
+              localStorage.setItem(this._key_save, temp);
+              this.token = temp.idToken;
+              this.currentUser = temp.userInfo;
+            }
+            return true;
+          } catch (ex) {
+            console.log(ex);
+            return false;
           }
-          return true;
-        } catch (ex) {
-          console.log(ex);
-          return false;
-        }
-      }) // or any other operator
-    );
+        }) // or any other operator
+      );
   }
 
   isVisitor(): any {
