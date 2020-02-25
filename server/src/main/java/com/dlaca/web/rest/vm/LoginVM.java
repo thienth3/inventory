@@ -15,7 +15,6 @@ public class LoginVM {
     @Size(min = 1, max = 50)
     private String username;
 
-
     @NotNull
     @Size(min = ManagedUserVM.PASSWORD_MIN_LENGTH, max = ManagedUserVM.PASSWORD_MAX_LENGTH)
     private String password;
@@ -29,7 +28,6 @@ public class LoginVM {
     public void setUsername(String username) {
         this.username = username;
     }
-
 
     public String getPassword() {
         return password;

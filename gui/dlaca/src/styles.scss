@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-@import "~ngx-toastr/toastr.css";
+@import '~ngx-toastr/toastr.css';
 // Required
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -15,12 +15,5 @@
 @import "../node_modules/bootstrap/scss/grid";
 
 .w100 {
-  width: 100%;}
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0 auto;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    width: 100%;
 }

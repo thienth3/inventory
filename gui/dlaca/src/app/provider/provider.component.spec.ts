@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { ProviderComponent } from './provider.component';
 
 describe('ProviderComponent', () => {
