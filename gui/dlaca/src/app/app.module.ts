@@ -13,15 +13,13 @@ import { HttpLoadingInterceptor } from './core/http/interceptors/http-loading.in
 import { HttpErrorInterceptor } from './core/http/interceptors/http-error.interceptor';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent,
-  ],
+    AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
 import { Router } from '@angular/router';
 import { SignInInfo } from 'src/app/core/services/swagger-api/models/signin-info.class';
 import { SignInService } from 'src/app/core/services/swagger-api/services/sign-in.service';
@@ -31,21 +30,16 @@ export class SignInComponent implements OnInit {
   }
   onSubmitSignIn() {
     const user = {
-
       username: this.signInForm.get(['email']).value,
       password: this.signInForm.get(['password']).value,
     } as SignInInfo;
 
     this.signInService.save(user).subscribe(res => {
       console.log("res", res),
-
         () => (this.authenticationError = true);
       localStorage.setItem('idToken', res.idToken);
       this.router.navigate(['provider/home']);
-
-    }, error => {
-
-    });
+    }, error => { });
     console.log(user);
   }
 

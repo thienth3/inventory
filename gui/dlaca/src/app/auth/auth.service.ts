@@ -5,7 +5,6 @@ import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { UserJwtControllerService } from '../core/services/swagger-api/services';
 
-
 export interface UpdatePassword {
   newPassword: any;
   oldPassword: any;

@@ -2,18 +2,16 @@
   margin-top: 100px;
   opacity: 0.8;
 }
-
 .title {
   color: #0000e6;
   font-weight: bold;
   letter-spacing: 3px;
-  
 }
-h4{
-  word-spacing:4px;
- font-size: 15px;
- letter-spacing: 1px;}
-
+h4 {
+  word-spacing: 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
 .key {
   transform: rotate(135deg);
   margin-left: 12px;
@@ -21,12 +19,9 @@ h4{
 .check_box {
   font-size: 14px;
   opacity: 0.8;
-
-  // position: relative;
 }
 .forgot {
   color: blue;
-  // position: absolute;
   margin-left: 35%;
 }
 .bt-sign-in {
@@ -36,47 +31,32 @@ h4{
   opacity: 0.9;
   color: whitesmoke;
 }
-
 a {
   font-size: 13px;
 }
-
 .hidden {
   opacity: 0;
 }
-
 .div-1 {
   width: 100%;
   position: relative;
   margin-top: 50px;
- 
 }
-
-
 .or-google {
   width: 48%;
-
   position: absolute;
 }
-
-
-
 .or {
   position: absolute;
   margin-left: 48%;
-  color:blue;
+  color: blue;
   font-size: 14px;
-
 }
-
-
-
 .or-github {
   width: 48%;
   position: absolute;
   margin-left: 52%;
 }
-
 .create_account {
   color: blue;
 }
@@ -86,7 +66,6 @@ a {
   margin-bottom: 30px;
   position: relative;
 }
-
 .google {
   width: 48%;
   position: absolute;
@@ -95,11 +74,6 @@ a {
   overflow: hidden;
   white-space: pre;
 }
-
-
-
-
-
 .github {
   width: 48%;
   position: absolute;
@@ -109,14 +83,11 @@ a {
   overflow: hidden;
   white-space: pre;
 }
-
 .formSignIn {
   margin-top: 30px;
   position: absolute;
   width: 100%;
 }
-
-
 .example-full-width {
   background-color: #f2f2f2;
   width: 100%;
@@ -125,13 +96,9 @@ a {
   opacity: 0.8;
   margin-bottom: 15px;
 }
-
-
-
 mat-icon {
   opacity: 0.3;
 }
-
 ::ng-deep label {
   font-weight: 500;
 }
