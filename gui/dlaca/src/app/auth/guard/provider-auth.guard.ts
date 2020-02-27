@@ -16,12 +16,11 @@ export class ProviderAuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     const returnUrl = state.url;
-
-    if (this.isAuthorty()) {
+  
+    if (this.isAuthorty()) 
       // logged in so return true
       return true;
-    }
-
+   
     this.auth.removeAccount();
     this.router.navigate(['/sign-in'], { queryParams: { login: '1', url: returnUrl } });
 
@@ -29,6 +28,7 @@ export class ProviderAuthGuard implements CanActivate {
   }
   isAuthorty(): boolean {
     const token = localStorage.getItem('idToken');
+  
     if (token) {
       return true
     }

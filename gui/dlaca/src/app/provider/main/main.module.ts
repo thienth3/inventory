@@ -16,9 +16,10 @@ import { MatRippleModule } from '@angular/material/core';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { LinkGoogleComponent } from './link-google/link-google.component';
 
 @NgModule({
-  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent],
+  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent, LinkGoogleComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

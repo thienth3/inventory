@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'provider',
-    canActivate: [ProviderAuthGuard],
+    //canActivate: [ProviderAuthGuard],
     loadChildren: './provider/provider.module#ProviderModule'
   },
   // {

@@ -6,7 +6,6 @@ import { ProviderComponent } from './provider.component';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from '../shared/material.module';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -21,7 +20,6 @@ import { FormsModule, } from '@angular/forms';
     LayoutModule,
     FormsModule,
     MatSliderModule,
-    MatIconModule,
     MatButtonModule,
     MatInputModule,
     MatCardModule,

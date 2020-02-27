@@ -19,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
+import { ProviderModule } from './provider/provider.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,6 +31,7 @@ import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,
+    ProviderModule,
     MatButtonModule,
     MatInputModule,
     MatCardModule,
