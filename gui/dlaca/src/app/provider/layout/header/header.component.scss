@@ -37,8 +37,20 @@ button {
 }
 .entity {
   display: none;
+  margin-right: 15px;
+}
+.menu {
+  opacity: 0.5;
 }
 
+.active-underline {
+  border-bottom: 1px solid red;
+  background-color: lightgrey;
+}
+
+.active-underline {
+  text-decoration: underline;
+}
 @media only screen and (max-width: 768px) {
   .menu {
     display: none;
@@ -53,11 +65,45 @@ button {
     width: 15px;
     height: 20px;
   }
-  button {
-    width: 30px;
-  }
+
   .entity {
     display: inline-block;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .nav-left {
+    width: 25%;
+  }
+  .img-logo {
+    width: 15px;
+    height: 15px;
+    text-align: left;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .entity {
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .nav-left {
+    width: 12%;
+  }
+  .name {
+    display: none;
+  }
+  .img-logo {
+    width: 20px;
+    height: 20px;
+    text-align: left;
+  }
+  .nav-right {
+    padding-right: 0px;
+  }
+
+  .mat-button {
+    padding: 0px 0px;
   }
 }
 
