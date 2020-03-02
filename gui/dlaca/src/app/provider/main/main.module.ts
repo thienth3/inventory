@@ -6,15 +6,12 @@ import { MainComponent } from './main.component';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from 'src/app/shared/material.module';
-import { MatCardModule } from '@angular/material/card';
-import { MatRippleModule } from '@angular/material/core';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { LinkGoogleComponent } from './link-google/link-google.component';
 
@@ -24,13 +21,10 @@ import { LinkGoogleComponent } from './link-google/link-google.component';
     CommonModule,
     MainRoutingModule,
     MatFormFieldModule,
-    MatSliderModule,
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule,
     MaterialModule,
-    MatRippleModule,
     FormsModule,
     ReactiveFormsModule
   ]

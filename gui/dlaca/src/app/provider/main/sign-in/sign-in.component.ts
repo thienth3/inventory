@@ -35,7 +35,7 @@ export class SignInComponent implements OnInit {
       password: this.signInForm.get(['password']).value,
     } as SignInInfo;
 
-    this.signInService.save(user).subscribe(res => {
+    this.signInService.signIn(user).subscribe(res => {
       console.log("res", res),
         () => (this.authenticationError = true);
       localStorage.setItem('idToken', res.idToken);

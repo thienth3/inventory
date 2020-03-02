@@ -36,7 +36,7 @@ export class CreateAccountComponent implements OnInit {
       password: this.registerForm.get(['password']).value,
     } as SignUpInfo;
     console.log("jjjjkkk", user)
-    this.registerService.save(user).subscribe(res => {
+    this.registerService.register(user).subscribe(res => {
       console.log("res", res)
       this.router.navigate(['provider/sign-in'])
     }, error => {

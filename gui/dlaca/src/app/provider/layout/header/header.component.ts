@@ -16,8 +16,8 @@ export class HeaderComponent implements OnInit {
   }
 
   isAuthenticated(): boolean {
-     if (this.isAuthorty()) 
-  return true;
+    if (this.isAuthorty())
+      return true;
   }
 
   isAuthorty(): boolean {
@@ -27,10 +27,10 @@ export class HeaderComponent implements OnInit {
     }
     return false
   }
-logOut(){
-  const token = localStorage.removeItem('idToken')
-  console.log(token);
-  this.router.navigate(['provider/sign-in'])
-}
+  logOut() {
+    const token = localStorage.removeItem('idToken')
+    console.log(token);
+    this.router.navigate(['provider/sign-in'])
+  }
 
 }

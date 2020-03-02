@@ -115,3 +115,23 @@ span {
   text-align: center;
   margin-top: 10px;
 }
+@media only screen and (max-width: 414px) {
+  .container {
+    margin-top: 140px;
+     }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    margin-top: 70px;
+     }
+}
+@media only screen and (max-width: 320px) {
+  .container {
+    margin-top: 40px;
+     }
+}
+@media only screen and (height: 812px) {
+  .container {
+    margin-top: 150px;
+     }
+}

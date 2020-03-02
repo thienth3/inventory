@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SignInInfo } from '../models/signin-info.class';
+import { API_HOST_DEV } from 'src/app/app.const';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignInService {
-  url= "http://localhost:8080/api"
   constructor(
     private http: HttpClient
   ) { }
-  save(user: SignInInfo): Observable<any> {
-    console.log('user',user)
-    return this.http.post( this.url+'/authenticate', user);
+  signIn(user: SignInInfo): Observable<any> {
+    console.log('user', user)
+    return this.http.post(API_HOST_DEV + '/api/authenticate', user);
   }
 }
