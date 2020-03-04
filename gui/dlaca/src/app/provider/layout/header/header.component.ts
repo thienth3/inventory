@@ -27,9 +27,9 @@ export class HeaderComponent implements OnInit {
     }
     return false
   }
+  
   logOut() {
     const token = localStorage.removeItem('idToken')
-    console.log(token);
     this.router.navigate(['provider/sign-in'])
   }
 

@@ -12,7 +12,6 @@ export class SignInService {
     private http: HttpClient
   ) { }
   signIn(user: SignInInfo): Observable<any> {
-    console.log('user', user)
     return this.http.post(API_HOST_DEV + '/api/authenticate', user);
   }
 }

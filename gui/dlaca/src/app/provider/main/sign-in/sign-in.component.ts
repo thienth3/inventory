@@ -21,7 +21,7 @@ export class SignInComponent implements OnInit {
     private signInService: SignInService,
     private router: Router,
   ) { }
-  
+
   signInInfo: SignInInfo;
   ngOnInit() {
     this.signInForm = this.fb.group({
@@ -36,12 +36,10 @@ export class SignInComponent implements OnInit {
     } as SignInInfo;
 
     this.signInService.signIn(user).subscribe(res => {
-      console.log("res", res),
-        () => (this.authenticationError = true);
+      () => (this.authenticationError = true);
       localStorage.setItem('idToken', res.idToken);
       this.router.navigate(['provider/home']);
     }, error => { });
-    console.log(user);
   }
 
 }

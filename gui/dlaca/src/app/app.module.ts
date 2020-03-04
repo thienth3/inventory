@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
 import { ProviderModule } from './provider/provider.module';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent
@@ -39,6 +40,8 @@ import { ProviderModule } from './provider/provider.module';
     ToastrModule.forRoot({}),
     FormsModule,
     ReactiveFormsModule,
+    // FontAwesomeModule
+   
   ],
   providers: [
     INIT_API_CONFIGURATION,

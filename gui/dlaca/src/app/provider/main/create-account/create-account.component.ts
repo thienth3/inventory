@@ -35,9 +35,7 @@ export class CreateAccountComponent implements OnInit {
       email: this.registerForm.get(['email']).value,
       password: this.registerForm.get(['password']).value,
     } as SignUpInfo;
-    console.log("jjjjkkk", user)
     this.registerService.register(user).subscribe(res => {
-      console.log("res", res)
       this.router.navigate(['provider/sign-in'])
     }, error => {
     });

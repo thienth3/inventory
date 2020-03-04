@@ -10,7 +10,6 @@ import { API_HOST_DEV } from 'src/app/app.const';
 export class RegisterService {
   constructor(private http: HttpClient) { }
   register(user: SignUpInfo): Observable<any> {
-    console.log('user', user)
     return this.http.post(API_HOST_DEV + '/api/register', user);
   }
 }

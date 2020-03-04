@@ -1,6 +1,8 @@
 .container {
   margin-top: 20px;
   opacity: 0.8;
+  margin-top:100px;
+  height:500px
 }
 .title {
   color: #ff3333;
@@ -149,11 +151,7 @@ span {
     margin-top: 100px;
      }
 }
-@media only screen and (max-width: 375px) {
-  .container {
-    margin-top: 30px;
-     }
-}
+
 @media only screen and (max-width: 375px) {
   .container {
     margin-top: 35px;
@@ -161,7 +159,7 @@ span {
 }
 @media only screen and (max-width: 320px) {
   .container {
-    margin-top: 7px;
+    margin-top: 70px;
      }
 }
 @media only screen and ( height: 812px) {

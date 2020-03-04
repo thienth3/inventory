@@ -1,34 +1,41 @@
 .container {
-    margin-top: 150px;
+  margin-top: 130px;
+}
+.link-google {
+  background-color: #f2f2f2;
+  width: 86%;
+  height: 40px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.copy {
+  background-color: #0033cc;
+  width: 86%;
+  height: 35px;
+  font-size: 14px;
+}
+.home {
+  width: 100%;
+  position: relative;
+}
+.center {
+  position: absolute;
+  text-align: center;
+  width: 86%;
+}
+.title {
+  color: #0033cc;
+  letter-spacing: 2px;
+}
+h4 {
+  letter-spacing: 1px;
+  text-align: left;
+}
+p {
+  font-size: 14px;
+}
+@media only screen and (height: 568px) {
+  .container {
+    margin-top: 80px;
   }
-  .link-google {
-    background-color: #f2f2f2;
-    width: 86%;
-    height: 40px;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .copy {
-    background-color: #0033cc;
-    width: 86%;
-    height: 35px;
-    font-size: 14px;
-  }
-  .home {
-    width: 100%;
-    position: relative;
-  }
-  .center {
-    position: absolute;
-    text-align: center;
-    width: 86%;
-  }
-  .title {
-    color: #0033cc;
-    letter-spacing: 2px;
-  }
-  h4 {
-    letter-spacing: 1px;
-    text-align: left;
-  }
-  
+}
