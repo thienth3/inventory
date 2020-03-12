@@ -1,0 +1,145 @@
+<div class="container">
+  <div class="menu">
+    <mat-tab-group>
+      <mat-tab label="PUBLIC"> </mat-tab>
+      <mat-tab label="YOUR NOTIFICATION"> </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="content">
+    <form class="mat-elevation-z6 " name="form" role="form" [formGroup]="notifyForm" (ngSubmit)="onSubmitNotify()">
+      <div class="comment">
+        <div class="formComent">
+          <label>Username</label>
+          <mat-form-field appearance="fill">
+            <input class=" user-name" type="tel" matInput formControlName="title">
+          </mat-form-field>
+          <label>Description</label>
+          <mat-form-field appearance="fill">
+            <textarea matInput class=" description" formControlName="content"></textarea>
+          </mat-form-field>
+          <label>Type</label>
+          <mat-form-field appearance="fill" class="type">
+            <mat-select formControlName="type">
+              <mat-option value="notify" (click)="unHide()">Notify</mat-option>
+              <mat-option value="messenger" (click)="unHide()">Messenger</mat-option>
+              <mat-option value="post" (click)="showStatus()">Post
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="type-container">
+            <mat-slide-toggle [ngClass]="{'status': hide==true}"  formControlName="status"  [checked]="checked"> Status</mat-slide-toggle>
+          
+          </div>
+        </div>
+        <div class="app">
+          <p class="remind">Remind in defferent chanels</p>
+          <div class="app-btn">
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name bold">Messenger</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Whatapp</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name bold">Viber</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Discard</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Wechat</p>
+            </div>
+          </div>
+          <div class="side">
+            <div class="question">
+              <p>Would do you like to repeat a reminder for</p>
+              <p> this nifification ?</p>
+            </div>
+            <div class="btn-side">
+              <mat-slide-toggle></mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+        <div class="app-resposition">
+          <p class="remind">Remind in defferent chanels</p>
+          <div class="app-btn">
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name bold">Messenger</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Whatapp</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name bold">Viber</p>
+            </div>
+          </div>
+          <div class="app-btn">
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Discard</p>
+            </div>
+            <div class="btn">
+              <img class="img-wiber" src="../../../../assets/images/viber.svg">
+              <p class="name">Wechat</p>
+            </div>
+          </div>
+          <div class="side">
+            <div class="question">
+              <p>Would do you like to repeat a reminder for</p>
+              <p> this nifification ?</p>
+            </div>
+            <div class="btn-side">
+              <mat-slide-toggle></mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="send">
+        <button mat-button class="btn-send">Send</button>
+      </div>
+    </form>
+  </div>
+  <div class="show">
+    <mat-card class=" card card1">
+      <div class="icon-notifi">
+        <img class="notifi2" src="../../../../assets/images/bell.svg">
+      </div>
+      <div class="content-new">
+        <p class="content2"> <b>Sandy Strand</b> <span> reminded you to build a plan</span></p>
+        <p class="content2">2m</p>
+      </div>
+      <div class="select">
+        <button mat-stroked-button class="btn-unfinished">
+          <span class="unfinished">Unfinished</span>
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <button mat-icon-button class="btn2-unfinished">
+          <mat-icon class="icon-select">arrow_drop_down</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  <div class="show" *ngFor="let notify of notifys">
+    <mat-card class=" card card3">
+      <div class="icon-notifi">
+        <img class="notifi2" *ngIf="notify.type=='post'" src="../../../../assets/images/coin.svg" alt="">
+        <img class="notifi2" *ngIf="notify.type=='notify'" src="../../../../assets/images/bell.svg" alt="">
+        <img class="notifi2" *ngIf="notify.type=='messenger'" src="../../../../assets/images/folder.svg" alt="">
+      </div>
+      <div class="content-new">
+        <p class="content2"> {{notify.content}}</p>
+        <p class="content2">15m</p>
+      </div>
+      <div class="select">
+      </div>
+    </mat-card>
+  </div>
+</div>

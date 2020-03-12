@@ -17,7 +17,8 @@ export class AuthService {
   public token: string;
   public currentUser: any;
   public eventChange: Subject<any> = new Subject();
-  private _key_save = '5g3efge6djsnjdsdh';
+
+  private _key_save: string = 'g3efge6djsnjdsdh';
 
   constructor(
     private http: HttpClient,
@@ -25,16 +26,19 @@ export class AuthService {
     private userJWTService: UserJwtControllerService
   ) {
     const temp = this.getStorageToken();
+
     if (temp) {
-      this.currentUser = temp.userInfo;
-      this.token = temp.idToken;
+      this.currentUser = temp;
+      this.token = temp.access_token;
     }
+
   }
 
   getToken() {
     return this.token;
   }
   private getStorageToken() {
+
     try {
       return JSON.parse(localStorage.getItem(this._key_save));
     } catch (ex) {
@@ -47,10 +51,10 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
-    console.log(this.currentUser, this.token);
     if (!this.token) {
       return false;
     }
+
     // Check whether the current time is past the
     // access token's expiry time
     // const expire_time = localStorage.getItem('expires_at');
@@ -60,12 +64,14 @@ export class AuthService {
     // const expiresAt = new Date(expire_time).getTime();
 
     // return new Date().getTime() < expiresAt;
+
     return true;
+
   }
 
   logout(): void {
     this.removeAccount();
-    this.router.navigateByUrl('/auth/login');
+    this.router.navigateByUrl('/auth/sign-in');
   }
 
   removeAccount() {
@@ -75,26 +81,24 @@ export class AuthService {
   }
 
   login(body): Observable<any> {
-    // this.removeAccount();
     return this.userJWTService.authorizeUsingPOSTResponse(body)
-    .pipe(
-      map((res: any) => {
-        try {
-          console.log(res);
-          if (res) {
-            const temp = res.body;
-            localStorage.setItem(this._key_save, temp);
-            this.token = temp.idToken;
-            this.currentUser = temp.userInfo;
+      .pipe(
+        map((res: any) => {
+          try {
+            if (res) {
+              const temp = res.body;
+              localStorage.setItem(this._key_save, JSON.stringify(temp));
+              this.token = temp.access_token;
+              this.currentUser = temp;
+            }
+            return true;
+          } catch (ex) {
+            return false;
           }
-          return true;
-        } catch (ex) {
-          console.log(ex);
-          return false;
-        }
-      }) // or any other operator
-    );
+        })
+      );
   }
+
 
   isVisitor(): any {
     return true;
@@ -103,4 +107,5 @@ export class AuthService {
   isProvider(): any {
     return true;
   }
+
 }

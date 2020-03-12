@@ -35,7 +35,7 @@ class UserJwtControllerService extends __BaseService {
     __body = loginVM;
     let req = new HttpRequest<any>(
       'POST',
-      this.rootUrl + `/api/authenticate`,
+      this.rootUrl + `/auth/login`,
       __body,
       {
         headers: __headers,

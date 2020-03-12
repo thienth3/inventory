@@ -5,14 +5,20 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ProviderAuthGuard } from 'src/app/auth/guard/provider-auth.guard';
 import { LinkGoogleComponent } from './link-google/link-google.component';
+import { NotificationComponent } from './notification/notification.component';
+
 
 const routes: Routes = [{
-  path: 'home',
+  path: '',
   component: HomeComponent,
+  canActivate: [ProviderAuthGuard]
+}, {
+  path: 'notification',
+  component: NotificationComponent,
   canActivate: [ProviderAuthGuard]
 },
 {
-  path: '',
+  path: 'link',
   component: LinkGoogleComponent
 },
 {

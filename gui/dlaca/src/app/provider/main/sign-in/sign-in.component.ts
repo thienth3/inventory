@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SignInInfo } from 'src/app/core/services/swagger-api/models/signin-info.class';
-import { SignInService } from 'src/app/core/services/swagger-api/services/sign-in.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -18,8 +18,9 @@ export class SignInComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private fb: FormBuilder,
-    private signInService: SignInService,
+
     private router: Router,
+    private authService: AuthService
   ) { }
 
   signInInfo: SignInInfo;
@@ -31,15 +32,15 @@ export class SignInComponent implements OnInit {
   }
   onSubmitSignIn() {
     const user = {
-      username: this.signInForm.get(['email']).value,
+      email: this.signInForm.get(['email']).value,
       password: this.signInForm.get(['password']).value,
     } as SignInInfo;
+    this.authService.login(user).subscribe(res => {
+      if (res) {
+        this.router.navigate(['/provider/home']);
+      }
 
-    this.signInService.signIn(user).subscribe(res => {
-      () => (this.authenticationError = true);
-      localStorage.setItem('idToken', res.idToken);
-      this.router.navigate(['provider/home']);
-    }, error => { });
+    })
   }
 
 }

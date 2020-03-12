@@ -3,8 +3,9 @@
   height: 50px;
 }
 .nav-left {
-  width: 30%;
+  width: 20%;
   height: 50px;
+ 
 }
 .nav-right {
   flex-grow: 1;
@@ -51,6 +52,16 @@ button {
 .active-underline {
   text-decoration: underline;
 }
+
+.search-container{
+  width:30%;
+  margin-left: 10px;
+  font-size: 11px;
+  flex-wrap: wrap;
+  line-height: 9px;
+  margin-top: 2px;
+
+}
 @media only screen and (max-width: 768px) {
   .menu {
     display: none;
@@ -83,7 +94,7 @@ button {
     font-size: 20px;
   }
   .entity {
-    width: 30px;
+    width: 35px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -120,4 +131,9 @@ button {
   top: 0;
   right: 0;
   z-index: 11111;
+}
+@media only screen and (max-width: 414px) {
+  .search-container{
+    display:none;
+  }
 }

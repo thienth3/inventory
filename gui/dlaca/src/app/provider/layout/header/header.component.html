@@ -3,28 +3,35 @@
     <a class="logo">
       <img src="https://hyt.r.worldssl.net/hinh-hoa-tuoi/gau-brown-size-40cm/5224_qua-tang.jpg" class="img-logo" alt="">
       <a class="name">LOGO</a>
+ 
     </a>
   </div>
+  <mat-form-field appearance="fill" class="search-container">
+    <span matPrefix>
+      <mat-icon> &nbsp;search</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+    <input type="tel" matInput class="search" placeholder="  Tell us about your search...">
+  </mat-form-field>
   <div class="item nav-right" [ngSwitch]="isAuthenticated()">
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="['/provider/sign-in']"
-      routerLinkActive="active-underline"> Moma</button>
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="['/provider/sign-in']"
+    <button mat-button class="menu" *ngSwitchCase="true"> <a  routerLink="/provider/notification"
+      routerLinkActive="active-underline"> Moma</a></button>
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
       routerLinkActive="active-underline">Team</button>
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="['/provider/sign-in']"
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
       routerLinkActive="active-underline">Golink</button>
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="['/provider/sign-in']"
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
       routerLinkActive="active-underline">Snippet</button>
-    <button mat-button [matMenuTriggerFor]="menu" class="entity" *ngSwitchCase="true">
+    <button mat-button [matMenuTriggerFor]="appmenu" class="entity" *ngSwitchCase="true">
       <mat-icon>arrow_drop_down</mat-icon>Entity
     </button>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Moma</button>
-      <button mat-menu-item>Team</button>
-      <button mat-menu-item>Golink</button>
-      <button mat-menu-item>Snippet</button>
+    <mat-menu #appmenu="matMenu">
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Moma</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Team</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Golink</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Snippet</button>
     </mat-menu>
-    
+
     <button mat-icon-button *ngSwitchCase="true">|
     </button>
     <button mat-icon-button *ngSwitchCase="true">

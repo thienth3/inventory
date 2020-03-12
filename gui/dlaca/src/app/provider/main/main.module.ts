@@ -14,9 +14,12 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { LinkGoogleComponent } from './link-google/link-google.component';
+import { NotificationComponent } from './notification/notification.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 @NgModule({
-  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent, LinkGoogleComponent],
+  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent, LinkGoogleComponent, NotificationComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
@@ -26,7 +29,9 @@ import { LinkGoogleComponent } from './link-google/link-google.component';
     MatInputModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+
   ]
 })
 export class MainModule { }

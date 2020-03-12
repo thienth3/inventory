@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { RegisterService } from 'src/app/core/services/swagger-api/services/register.service';
 import { SignUpInfo } from '../../../core/services/swagger-api/models/signup-info.class';
@@ -14,7 +13,6 @@ export class CreateAccountComponent implements OnInit {
 
   registerForm: FormGroup
   constructor(
-    private http: HttpClient,
     private fb: FormBuilder,
     private registerService: RegisterService,
     private router: Router) { }
