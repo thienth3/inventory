@@ -6,6 +6,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { ProviderAuthGuard } from 'src/app/auth/guard/provider-auth.guard';
 import { LinkGoogleComponent } from './link-google/link-google.component';
 import { NotificationComponent } from './notification/notification.component';
+import { ManageesComponent } from './managees/managees.component';
 
 
 const routes: Routes = [{
@@ -16,6 +17,11 @@ const routes: Routes = [{
   path: 'notification',
   component: NotificationComponent,
   canActivate: [ProviderAuthGuard]
+},
+{
+  path:'managees',
+  component: ManageesComponent,
+   canActivate: [ProviderAuthGuard]
 },
 {
   path: 'link',

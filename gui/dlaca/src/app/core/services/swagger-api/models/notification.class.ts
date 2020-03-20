@@ -1,4 +1,4 @@
-export class Notification{
+export class Notification {
     id?: number;
     title: string;
     content: string;

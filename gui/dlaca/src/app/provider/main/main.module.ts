@@ -15,11 +15,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { LinkGoogleComponent } from './link-google/link-google.component';
 import { NotificationComponent } from './notification/notification.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ManageesComponent } from './managees/managees.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent, LinkGoogleComponent, NotificationComponent],
+  declarations: [MainComponent, HomeComponent, SignInComponent, CreateAccountComponent, LinkGoogleComponent, NotificationComponent, ManageesComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
@@ -31,7 +32,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     FormsModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
-
+    MatTableModule
+  ],
+  exports:[
+    MainComponent
   ]
+
 })
-export class MainModule { }
+export class MainModule {
+ 
+ }

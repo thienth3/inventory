@@ -13,14 +13,6 @@ import { HttpTokenInterceptor } from './core/http/interceptors/http-token.interc
 import { HttpLoadingInterceptor } from './core/http/interceptors/http-loading.interceptor';
 import { HttpErrorInterceptor } from './core/http/interceptors/http-error.interceptor';
 
-import { MatSliderModule } from '@angular/material/slider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule, FormsModule,  } from '@angular/forms';
-import { ProviderModule } from './provider/provider.module';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,18 +22,19 @@ import { ProviderModule } from './provider/provider.module';
     AppRoutingModule,
     ApiModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatIconModule,
-    ProviderModule,
-    MatButtonModule,
-    MatInputModule,
-    MatCardModule,
     NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({}),
-    FormsModule,
-    ReactiveFormsModule,
+  
+    // MatSliderModule,
+    // MatIconModule,
+    // ProviderModule,
+    // MatButtonModule,
+    // MatInputModule,
+    // MatCardModule,
+    // FormsModule,
+    // ReactiveFormsModule,
     // FontAwesomeModule
-   
+
   ],
   providers: [
     INIT_API_CONFIGURATION,

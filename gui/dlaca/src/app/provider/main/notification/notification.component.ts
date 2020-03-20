@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { Notification } from 'src/app/core/services/swagger-api/models/notification.class';
 import { NotificationService } from 'src/app/core/services/swagger-api/services/notification.service';
 
@@ -15,25 +14,22 @@ export class NotificationComponent implements OnInit {
   notificationForm: Notification;
   notifys: Notification[];
   hide: boolean;
+
   constructor(
     private fb: FormBuilder,
     private notificationService: NotificationService
   ) { }
 
   ngOnInit() {
-    console.log("1");
+ 
     this.notifyForm = this.fb.group({
       title: [''],
       content: [''],
       type: [''],
       status: []
-
     });
-
     this.getAll();
   }
-
-
 
   onSubmitNotify() {
 
@@ -49,10 +45,10 @@ export class NotificationComponent implements OnInit {
     } else {
       reminder.status = "unPublic"
     }
+
     this.notificationService.sendNotify(reminder).subscribe(res => {
       this.getAll();
     });
-    console.log("1111111", reminder);
   }
 
   getAll() {
@@ -64,7 +60,9 @@ export class NotificationComponent implements OnInit {
   showStatus() {
     this.hide = false;
   }
+
   unHide() {
     this.hide = true;
   }
+
 }

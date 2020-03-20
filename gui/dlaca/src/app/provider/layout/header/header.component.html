@@ -13,13 +13,13 @@
     <input type="tel" matInput class="search" placeholder="  Tell us about your search...">
   </mat-form-field>
   <div class="item nav-right" [ngSwitch]="isAuthenticated()">
-    <button mat-button class="menu" *ngSwitchCase="true"> <a  routerLink="/provider/notification"
+    <button mat-button class="menu" *ngSwitchCase="true"> <a  routerLink="notification"
       routerLinkActive="active-underline"> Moma</a></button>
     <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
       routerLinkActive="active-underline">Team</button>
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="provider/notification"
       routerLinkActive="active-underline">Golink</button>
-    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/notification"
       routerLinkActive="active-underline">Snippet</button>
     <button mat-button [matMenuTriggerFor]="appmenu" class="entity" *ngSwitchCase="true">
       <mat-icon>arrow_drop_down</mat-icon>Entity

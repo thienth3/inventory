@@ -68,7 +68,7 @@ span {
 }
 .formSignUp {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 48px;
   position: absolute;
 }
 .continue {
@@ -114,21 +114,28 @@ span {
   width: 100%;
   position: relative;
   margin-top: 60px;
+  display:flex;
+ 
 }
 .or-google {
-  width: 48%;
+  width: 46%;
   position: absolute;
+  margin-top: 20px;
 }
 .or {
   position: absolute;
-  margin-left: 48%;
-  color: #ff3333;
+  margin-left: 45%;
+  color: blue;
   font-size: 14px;
+  padding-top: 0px;;
+  width: 4%;
+  margin-top: 10px;
 }
 .or-github {
-  width: 48%;
+  margin-top: 20px;
+  width: 46%;
   position: absolute;
-  margin-left: 52%;
+  margin-left: 54%;
 }
 .full-name {
   width: 100%;

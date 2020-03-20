@@ -16,7 +16,7 @@ export class NotificationService {
   sendNotify(reminder: Notification): Observable<any> {
     return this.http.post(API_HOST_DEV + '/notification/create', reminder);
   }
-  
+
   getAllNotify(): Observable<Notification[]> {
     return this.http.get<Notification[]>(API_HOST_DEV + '/notification')
   }

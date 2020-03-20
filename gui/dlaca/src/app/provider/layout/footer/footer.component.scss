@@ -1,12 +1,12 @@
 .container-fluid {
   display: flex;
-  margin-top: 100px;
-  padding-right: 0px;
+  margin-top: 150px;
   text-align: center;
   color: whitesmoke;
   background-color: #0d0033;
-  margin-bottom: 0px;
-}
+
+  float: inline-end;
+ }
 
 .img-container {
   width: 29%;

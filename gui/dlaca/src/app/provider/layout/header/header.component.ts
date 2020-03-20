@@ -18,20 +18,10 @@ export class HeaderComponent implements OnInit {
   }
 
   isAuthenticated(): boolean {
-    // if (this.isAuthorty())
-    //   return true;
+  
     if (this.authenService.getToken() != null)
       return true
   }
-
-
-  // isAuthorty(): boolean {
-  //   const token = localStorage.getItem('idToken');
-  //   if (token) {
-  //     return true
-  //   }
-  //   return false
-  // }
 
   logOut() {
     this.authenService.removeAccount();

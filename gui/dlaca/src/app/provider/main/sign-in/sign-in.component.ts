@@ -12,8 +12,8 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class SignInComponent implements OnInit {
   signInForm: FormGroup;
-  authenticationError = false;
-  token: any;
+  // authenticationError = false;
+  // token: any;
 
   constructor(
     private http: HttpClient,
@@ -23,13 +23,14 @@ export class SignInComponent implements OnInit {
     private authService: AuthService
   ) { }
 
-  signInInfo: SignInInfo;
+
   ngOnInit() {
     this.signInForm = this.fb.group({
       email: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(100), Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(100)]],
     });
   }
+  
   onSubmitSignIn() {
     const user = {
       email: this.signInForm.get(['email']).value,
@@ -37,7 +38,7 @@ export class SignInComponent implements OnInit {
     } as SignInInfo;
     this.authService.login(user).subscribe(res => {
       if (res) {
-        this.router.navigate(['/provider/home']);
+        this.router.navigate(['/provider']);
       }
 
     })

@@ -19,8 +19,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
     return next.handle(request)
       .pipe(
         catchError((response: HttpErrorResponse) => {
-          console.log(response);
-
+         
           const error = response.error;
           let errMsg = '';
           // Client Side Error
