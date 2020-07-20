@@ -1,0 +1,145 @@
+.container {
+  margin-top: 15px;
+  opacity: 0.8;
+  height:400px;
+}
+.title {
+  color: #0000e6;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+h4 {
+  word-spacing: 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.key {
+  transform: rotate(135deg);
+  margin-left: 12px;
+}
+.check_box {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.forgot {
+  color: blue;
+  margin-left: 35%;
+}
+.bt-sign-in {
+  background-color: #0000e6;
+  width: 100%;
+  height: 35px;
+  opacity: 0.9;
+  color: whitesmoke;
+}
+a {
+  font-size: 13px;
+}
+.hidden {
+  opacity: 0;
+}
+.div-1 {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  display:flex;
+ 
+}
+.or-google {
+  width: 46%;
+  position: absolute;
+  margin-top: 20px;
+}
+.or {
+  position: absolute;
+  margin-left: 45%;
+  color: blue;
+  font-size: 14px;
+  padding-top: 0px;;
+  width: 4%;
+  margin-top: 10px;
+}
+.or-github {
+  margin-top: 20px;
+  width: 46%;
+  position: absolute;
+  margin-left: 54%;
+}
+.create_account {
+  color: blue;
+}
+.continue {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.google {
+  width: 48%;
+  position: absolute;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+.github {
+  width: 48%;
+  position: absolute;
+  margin-left: 52%;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+.formSignIn {
+  margin-top: 48px;
+  position: absolute;
+  width: 100%;
+}
+.example-full-width {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+mat-icon {
+  opacity: 0.3;
+}
+::ng-deep label {
+  font-weight: 500;
+}
+.col-md-4 {
+  text-align: center;
+}
+.new_user {
+  color: black;
+}
+span {
+  font-size: 100%;
+}
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 414px) {
+  .container {
+    margin-top: 140px;
+     }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    margin-top: 70px;
+     }
+}
+@media only screen and (max-width: 320px) {
+  .container {
+    margin-top: 30px;
+     }
+}
+@media only screen and (max-height: 823px) {
+  .container {
+    margin-top: 100px;
+     }
+}

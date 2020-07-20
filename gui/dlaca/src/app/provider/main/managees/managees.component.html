@@ -1,0 +1,166 @@
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class=" col-xl-5 col-md-5 col-sm-5 ">
+      <div class="row justify-content-end">
+        <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12   info-container" *ngIf="info">
+          <mat-card>
+            <div class="img">
+              <img class="avatar" [src]="info.avatar">
+              <p class="name">
+                <a><b>{{info.nickName}}</b></a>
+              </p>
+              <p class="link">
+                <a>{{info.userName}}</a>
+              </p>
+            </div>
+          </mat-card>
+          <mat-card class="info-detail-container">
+            <div class="info-detail">
+              <div class="icon">
+                <mat-icon class="icon-info">mail_outline</mat-icon>
+                <mat-icon class="icon-info">place</mat-icon>
+                <mat-icon class="icon-info">work_outline</mat-icon>
+                <mat-icon class="icon-info">access_time</mat-icon>
+                <mat-icon class="icon-info">account_circle</mat-icon>
+              </div>
+              <div class="description">
+                <div class="info-description">
+                  <p>{{info.email}}</p>
+                </div>
+                <div class="info-description">
+                  <p>{{info.address}} </p>
+                </div>
+                <div class="info-description">
+                  <p>{{info.work}}</p>
+                </div>
+                <div class="info-description">
+                  <p>{{info.birthday}}</p>
+                </div>
+                <div class="info-description">
+                  <p>{{info.fullName}}</p>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-xl-8 col-lg-9 col-md-12 achievement-container">
+          <mat-card class=" achievement justify-content-end ">
+            <div class="title">
+              <b>Achievement</b>
+            </div>
+            <div class="achievement-detail">
+              <div class="icon">
+                <img class="img-achievement" src="../../../../assets/images/trophy.svg">
+                <img class="img-achievement" src="../../../../assets/images/gold-medal.svg">
+                <img class="img-achievement" src="../../../../assets/images/medal.svg">
+                <img class="img-achievement" src="../../../../assets/images/diploma.svg">
+                <img class="img-achievement" src="../../../../assets/images/like.svg">
+              </div>
+              <div class="description">
+                <div class="info-description">
+                  <p>Best performer of 2019</p>
+                </div>
+                <div class="info-description">
+                  <p>Best performer of Jan 2019</p>
+                </div>
+                <div class="info-description">
+                  <p>Best performer of Feb 2019</p>
+                </div>
+                <div class="info-description">
+                  <p>The most reponsive employee in
+                    term of responding to reminders</p>
+                </div>
+                <div class="info-description">
+                  <p>Best performer of Feb 2019</p>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-12">
+      <div class="row">
+        <div class=" col-lg-9 col-md-12 search-container ">
+          <div class="row ">
+            <div class="col-md-8 col-7 search">
+              <mat-form-field appearance="fill" class="mat-search">
+                <span matPrefix>
+                  <mat-icon> search</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="tel" matInput placeholder="Search..." class="input-search">
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 col-5 edit  ">
+              <button mat-stroked-button class="btn-edit">
+                <img class="img-edit" src="../../../../assets/images/edit.svg">
+                <span class="edit-profile">Edit profile</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="  col-xl-9 col-lg-9 col-md-12 col-sm-12  manager-container ">
+          <div class="mat-elevation-z8 manager">
+            <div class="  title-manager">
+              <b>Manager</b>
+            </div>
+            <table mat-table [dataSource]="manager">
+              <ng-container matColumnDef="avatar">
+                <th mat-header-cell *matHeaderCellDef> NAME </th>
+                <td mat-cell *matCellDef="let element"> <img class="img-menu" [src]="element?.avatar"> </td>
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> NAME </th>
+                <td mat-cell *matCellDef="let element">{{element.name}} </td>
+              </ng-container>
+              <ng-container matColumnDef="ldap">
+                <th mat-header-cell *matHeaderCellDef> LDAP </th>
+                <td mat-cell *matCellDef="let element">{{element.ldap}} </td>
+              </ng-container>
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> POSITION </th>
+                <td mat-cell *matCellDef="let element">{{element.position}} </td>
+              </ng-container>
+              <ng-container matColumnDef="employee">
+                <th mat-header-cell *matHeaderCellDef> EMPLOYEE </th>
+                <td mat-cell *matCellDef="let element"> </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 manager-container ">
+          <div class="  mat-elevation-z8 manager">
+            <div class="title-manager">
+              <b>Managees</b>
+            </div>
+            <table mat-table [dataSource]="manageeses">
+              <ng-container matColumnDef="avatar">
+                <th mat-header-cell *matHeaderCellDef> AVATAR </th>
+                <td mat-cell *matCellDef="let element"> <img class="img-menu" [src]="element?.avatar"> </td>
+
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> NAME </th>
+                <td mat-cell *matCellDef="let element">{{element.name}} </td>
+              </ng-container>
+              <ng-container matColumnDef="ldap">
+                <th mat-header-cell *matHeaderCellDef> LDAP </th>
+                <td mat-cell *matCellDef="let element">{{element.ldap}} </td>
+              </ng-container>
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> POSITION </th>
+                <td mat-cell *matCellDef="let element">{{element.position}} </td>
+              </ng-container>
+              <ng-container matColumnDef="employee">
+                <th mat-header-cell *matHeaderCellDef> EMPLOYEE </th>
+                <td mat-cell *matCellDef="let element"> </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

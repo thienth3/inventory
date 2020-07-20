@@ -11,8 +11,7 @@ export class NotifyService {
     this.toastr.success(msg);
   }
 
-  error(msg: string): void {
-    console.log(msg);
-    this.toastr.error(msg);
+  error(msg: string): void {5
+     this.toastr.error(msg);
   }
 }

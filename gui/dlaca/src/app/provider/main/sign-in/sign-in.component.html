@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5  col-sm-12">
+      <h3 class="title">Welcom back !</h3>
+      <h4>
+        Sign in to check out what you've missed since you
+      </h4>
+      <h4>
+        were last here
+      </h4>
+      <br>
+      <div class="continue">
+        <button mat-raised-button class="google">
+          <a href="#"><img src="../../../../assets/images/search.svg" /></a>
+          <span> Continue with Google</span>
+        </button>
+        <button mat-raised-button class="github">
+          <a href="#"><img src="../../../../assets/images/github.svg" /></a>
+          <span> Continue with Github</span>
+        </button>
+      </div>
+      <div class="div-1">
+        <div class="or-google">
+          <hr class="flex-fill m-0">
+        </div>
+        <div class="or">
+          <span class="mx-3"> OR </span>
+        </div>
+        <div class="or-github">
+          <hr class="flex-fill m-0">
+        </div>
+        <form class="formSignIn" name="form" role="form" [formGroup]="signInForm" (ngSubmit)="onSubmitSignIn()">
+          <div class="email">
+            <mat-form-field class="example-full-width">
+              <span matPrefix>
+                <mat-icon> &nbsp;mail_outline</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <input type="tel" matInput formControlName="email">
+            </mat-form-field>
+          </div>
+          <div class="password">
+            <mat-form-field class="example-full-width">
+              <span matPrefix>
+                <mat-icon class="key"> &nbsp;vpn_key&nbsp;&nbsp;</mat-icon>
+              </span>
+              <input matInput [type]="hide ?  'text':'password' " [attr.aria-label]="'Hide password'"
+                formControlName="password">
+              <mat-icon matSuffix style=" margin-right: 10px; margin-top: 12px" (click)="hide = !hide">
+                {{hide ? 'visibility' : 'visibility_off'}}
+              </mat-icon>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-checkbox class="check_box"> Remember me</mat-checkbox>
+            <a class="forgot">Forgot password?</a>
+          </div>
+          <div class="center">
+            <button mat-raised-button class="bt-sign-in" color="primary"> Sign In</button>
+          </div>
+          <div class="center">
+            &nbsp;
+            <a class="new_user"> New user ?</a>
+            &nbsp;
+            <a class="create_account">Create new account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

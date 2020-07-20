@@ -24,6 +24,17 @@ import { HttpErrorInterceptor } from './core/http/interceptors/http-error.interc
     BrowserAnimationsModule,
     NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({}),
+  
+    // MatSliderModule,
+    // MatIconModule,
+    // ProviderModule,
+    // MatButtonModule,
+    // MatInputModule,
+    // MatCardModule,
+    // FormsModule,
+    // ReactiveFormsModule,
+    // FontAwesomeModule
+
   ],
   providers: [
     INIT_API_CONFIGURATION,

@@ -1,0 +1,174 @@
+.container-fluid {
+  display: flex;
+  margin-top: 150px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #0d0033;
+
+  float: inline-end;
+ }
+
+.img-container {
+  width: 29%;
+}
+
+.img {
+  height: 60px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.about {
+  width: 14%;
+}
+
+.condition {
+  width: 14%;
+}
+
+.contact {
+  width: 14%;
+}
+
+.link-container {
+  flex-grow: 1;
+  padding-right: 0px;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+a {
+  line-height: 9px;
+  font-size: 12px;
+  display: flex;
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.link {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  text-align: left;
+  padding-right: 0px;
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.facebook {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+.google {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+.github {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+.responsive {
+  display: none;
+  background-color: #0d0033;
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 0px;
+}
+
+.footer-left {
+  width: 40%;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-right {
+  flex-grow: 1;
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+.facebook-2 {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  margin-bottom: 35px;
+}
+
+.google-2 {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  margin-bottom: 35px;
+
+}
+
+.github-2 {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  margin-bottom: 35px;
+}
+
+.img-2 {
+  height: 40px;
+  width: 70px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.title2 {
+  margin-top: 10px;
+ 
+}
+a{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+p{
+  line-height: 11px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-container {
+    width: 15%;
+  }
+  .img {
+    height: 60px;
+    width: 50px;
+  }
+  .condition {
+    width: 16%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .container-fluid {
+    display: none;
+  }
+  .responsive {
+    display: flex;
+  }
+a{
+  display:inline-block
+}
+}

@@ -1,3 +1,54 @@
-<p>
-  header works!
-</p>
+<div class="mat-elevation-z6">
+  <div class="item nav-left">
+    <a class="logo">
+      <img src="https://hyt.r.worldssl.net/hinh-hoa-tuoi/gau-brown-size-40cm/5224_qua-tang.jpg" class="img-logo" alt="">
+      <a class="name">LOGO</a>
+ 
+    </a>
+  </div>
+  <mat-form-field appearance="fill" class="search-container">
+    <span matPrefix>
+      <mat-icon> &nbsp;search</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+    <input type="tel" matInput class="search" placeholder="  Tell us about your search...">
+  </mat-form-field>
+  <div class="item nav-right" [ngSwitch]="isAuthenticated()">
+    <button mat-button class="menu" *ngSwitchCase="true"> <a  routerLink="notification"
+      routerLinkActive="active-underline"> Moma</a></button>
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/provider/notification"
+      routerLinkActive="active-underline">Team</button>
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="provider/notification"
+      routerLinkActive="active-underline">Golink</button>
+    <button mat-button class="menu" *ngSwitchCase="true" routerLink="/notification"
+      routerLinkActive="active-underline">Snippet</button>
+    <button mat-button [matMenuTriggerFor]="appmenu" class="entity" *ngSwitchCase="true">
+      <mat-icon>arrow_drop_down</mat-icon>Entity
+    </button>
+
+    <mat-menu #appmenu="matMenu">
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Moma</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Team</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Golink</button>
+      <button mat-menu-item routerLink="/provider/notification" routerLinkActive="active">Snippet</button>
+    </mat-menu>
+
+    <button mat-icon-button *ngSwitchCase="true">|
+    </button>
+    <button mat-icon-button *ngSwitchCase="true">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+    <button mat-icon-button *ngSwitchCase="true" (click)="hide=!hide">
+      <mat-icon [ngClass]="{'active-notifi': hide==true}">crop_square</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu" *ngSwitchCase="true">
+      <img class="avatar" src="../../../../assets/images/sergey-brin-getty_573x300.jpg" alt="">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Edit profile</button>
+      <button mat-menu-item>Account setting</button>
+      <button mat-menu-item>Manage team</button>
+      <button mat-menu-item (click)="logOut()">Logout</button>
+    </mat-menu>
+  </div>
+</div>

@@ -33,8 +33,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.authService.login(this.formLogin.value).subscribe((res: any) => {
-      console.log(res);
-      if (res) {
+           if (res) {
         this.router.navigate(['/provider']);
       }
     });
